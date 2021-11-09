@@ -32,6 +32,9 @@ k / |C| sets threshold by which components need to be different from internal no
 
 If k is large, it causes preference of larger objects. (since it is more likely to merge)
 
+test: 
+![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}) 
+
 **Features and Weights**
 Project every pixel into feature space defined by (x, y, r, g, b)
 Each pixel is connected to its neighboring pixels and weights are determined by difference in intensities
