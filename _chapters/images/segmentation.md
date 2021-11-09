@@ -9,10 +9,31 @@ This section
 # 13.2 Gestalt Theory
 # 13.3 Agglomerative Clustering
 # 13.4 Graph-Based Segmentation
-dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-sunt in culpa qui officia deserunt mollit anim id est laborum.
+Introduced by Felzenszalb and Huttenlocher
 
+**Problem Formulation**
+Graph G = (V, E)
+V is a set of nodes
+E is a set of undirected edges between pairs of pixels
+w(vi, vj) is the weight of the edge btween nodes vi and vj
+S is a segmentation of graph G such that G' = (V, E') where 
+S divides G into G such that it contains distinct clusters C
+
+MInt
+
+Dif(C1, C2) is difference between two clusters
+in(C1, C2) is internal difference for 
+
+Predicate D deermines whether there is a boundary for segmentation
+
+If dif between two clusters is less than in(C1, C2), then merge
+
+k / |C| sets threshold by which components need to be different from internal nodes
+
+If k is large, it causes preference of larger objects. (since it is more likely to merge)
+
+**Features and Weights**
+Project every pixel into feature space defined by (x, y, r, g, b)
+Each pixel is connected to its neighboring pixels and weights are determined by difference in intensities
+Weights between pixels are determined using L2 (Euclidian distance) in feature space
+Edges are chosen for only top ten nearest neighbors in feature sapce to ensure run time of O(n log n) where n is number of pixels.
