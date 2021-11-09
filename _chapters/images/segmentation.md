@@ -1,6 +1,6 @@
 ---
 title: Segmentation
-keywords: (insert comma-separated keywords here)
+keywords: Gestalt Theory, Agglomerative Clustering, Graph-Based Segmentation
 order: 9 # Lecture number for 2020
 ---
 
