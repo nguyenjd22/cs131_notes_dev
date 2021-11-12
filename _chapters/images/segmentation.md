@@ -18,6 +18,7 @@ Gestalt Theory is a commonly used theory within the perception subfield psycholo
 Several types of Gestalt perception are displayed below:
 * #### Subjective contours: 
     Illusory edges or borders perceived/inferred by an observer using gaps in an existing image. In the below image, observe the illusory rings perceived by deleting parts of the black circles.
+    
     <img src="https://i.imgur.com/wTExxVS.png" alt="drawing" width="275"/>
     
 * #### Occlusion: 
@@ -33,27 +34,37 @@ Scientists have identified several "factors"- similarities between objects that 
 
 * #### Proximity
     Proximity states that objects closer to each other are likely to be grouped together. 
+    
     <img src="https://i.imgur.com/Xxdw47x.png" alt="drawing" width="500"/> 
+    
     Here, we observe on the left a normal grid of circles with 6 columns. However, on the right, because the columns are paired up and separated, we perceive it as 3 groups of 2 columns. 
     
 * #### Similarity
   Similarity states that objects that appear similar are likely to be grouped together.
+  
   <img src="https://i.imgur.com/ZdKtMv7.png" alt="drawing" width="250"/><img src="https://i.imgur.com/qetE0qK.png" alt="drawing" width="295"/>
+  
   Here, we observe first the same 6x6 grid of squares, but this time in the second image the rows alternate colors. Because the circles within each row appear more visually similar to other rows of the same color, viewers are more likely to differentiate the grid into two groups of different colored circles.
   
 * #### Common Fate
   Common fate states that objects with a "similar fate"- that is, they appear to be moving in the same direction- are more likely to be grouped together.
+  
 <img src="https://i.imgur.com/yrAkszy.png" alt="drawing" width="250"/>
+
     Here, we observe that the eight birds all appear to be moving up and towards the right; the common fate factor therefore argues that we tend to observe them as a single flock or unit.
     
 * #### Common Region
   Common region states that objects drawn to lie within a single region, with a boundary separating them from other objects, are more likely to be grouped together.
+  
 <img src="https://i.imgur.com/gY9MgN4.png" alt="drawing" width="400"/>
+
     Here, in the top half there is no grouping (in fact, due to the proximity factor we consider the two middle dots to be grouped). However, we observe in the bottom half of the image that the dots are separated into two groups by the blue rectangular boundaries; the common region factor states that we will observe the four dots as two individual groups.
     
 * #### Parallelism
     Parallelism states that objects that are "parallel"- that is, they are oriented in the same way- are likely to be grouped together.
+    
     <img src="https://i.imgur.com/f6ccCpC.png" alt="drawing" width="400"/>
+    
     Here, we can observe that there are three line segments that are parallel and facing the same general direction. According to the parallelism factor, these are more likely to be grouped together, while the three other lines that share no parallelism with each other do not belong to any group.
     
 * #### Symmetry
