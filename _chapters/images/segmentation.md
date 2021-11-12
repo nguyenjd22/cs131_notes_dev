@@ -233,6 +233,7 @@ _The end result of segmentation allows us to group and differentiate distinct cl
 We start with a Graph $G = (V, E)$, where $V$ is a set of nodes and $E$ is a set of undirected edges between pairs of pixels. Let's define $w(v_i, v_j)$ as the weight of the edge btween nodes $v_i$ and $v_j$.
 
 $S$ is a segmentation of graph G such that $G' = (V, E')$ where $S$ divides $G$ into G such that it contains distinct clusters $C$. 
+
 <img src="https://i.imgur.com/UibIc12.png" alt="drawing" width="600"/>
 
 In this case, we have 3 distinct clusters.
@@ -249,10 +250,12 @@ We will define two functions that we will use for merging clusters (dif and in):
 * <img src="https://i.imgur.com/zgASFB1.png" alt="drawing" width=300/> is maximum internal difference that connects two nodes within each cluster ($C_1$ and $C_2$).
     
 Now that we have our two functions, we will use them to determine whether we want to merge two clusters. This is done by the following equation:
+
 <img src="https://i.imgur.com/mjI0jlC.png" alt="drawing" width=600/>
 
 
 If $dif(C1,C2)$ is less than $in(C1, C2)$, we will merge. Practically speaking, this means that the clusters are very close to each other such that the minimum weighted edge between clusters $C1$ and $C2$ is less than both clusters' max internal weighted edges. 
+
 <img src="https://i.imgur.com/WfawsdA.png" alt="drawing" width=300/>
 
 
@@ -270,12 +273,15 @@ To put this algorithm to work, we can now project every pixel into feature space
 
 <img src="https://i.imgur.com/Q3ONMgP.png" alt="drawing" width=100/>
 
-
 Edge weights are determined by difference in intensities by using using L2 norm (Euclidian distance) in the feature space. 
 
 <img src="https://i.imgur.com/x27iFBO.png" alt="drawing"/>
 
 Edges are chosen for only top ten nearest neighbors in feature space to ensure run time of $O(n \log n)$ where $n$ is number of pixels.
+
+
+
+
 
 
 
