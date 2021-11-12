@@ -56,14 +56,14 @@ Scientists have identified several "factors"- similarities between objects that 
   
 <img src="https://i.imgur.com/yrAkszy.png" alt="drawing" width="250"/>
 
-    Here, we observe that the eight birds all appear to be moving up and towards the right; the common fate factor therefore argues that we tend to observe them as a single flock or unit.
+Here, we observe that the eight birds all appear to be moving up and towards the right; the common fate factor therefore argues that we tend to observe them as a single flock or unit.
     
 * #### Common Region
   Common region states that objects drawn to lie within a single region, with a boundary separating them from other objects, are more likely to be grouped together.
   
 <img src="https://i.imgur.com/gY9MgN4.png" alt="drawing" width="400"/>
 
-    Here, in the top half there is no grouping (in fact, due to the proximity factor we consider the two middle dots to be grouped). However, we observe in the bottom half of the image that the dots are separated into two groups by the blue rectangular boundaries; the common region factor states that we will observe the four dots as two individual groups.
+Here, in the top half there is no grouping (in fact, due to the proximity factor we consider the two middle dots to be grouped). However, we observe in the bottom half of the image that the dots are separated into two groups by the blue rectangular boundaries; the common region factor states that we will observe the four dots as two individual groups.
     
 * #### Parallelism
     Parallelism states that objects that are "parallel"- that is, they are oriented in the same way- are likely to be grouped together.
@@ -89,7 +89,7 @@ Scientists have identified several "factors"- similarities between objects that 
   
 <img src="https://i.imgur.com/5Vssqc2.png" alt="drawing" width="400"/>
 
-    In the IBM logo, we perceive the image as forming the characters I, B, and M, rather than a series of disconnected horizontal shapes. This is due to the closure factor, which states that that because the shapes form the pattern of letters, we fill in the empty space, and interpret the image as those letters rather than a random collection of shapes.
+In the IBM logo, we perceive the image as forming the characters I, B, and M, rather than a series of disconnected horizontal shapes. This is due to the closure factor, which states that that because the shapes form the pattern of letters, we fill in the empty space, and interpret the image as those letters rather than a random collection of shapes.
     
 With that said, it's important to note that even though these concepts exist, to implement them in an algorithm is quite difficult. For instance, especially when dealing with real-world objects, it's not easy to determine if two objects share a grouping by the parallelism factor, because of the complexities of images and slight variations that make algorithmic determination of such factors difficult.
 
@@ -209,9 +209,10 @@ The properties desired for a good clustering algorithm include:
 * #### Average Link
     This is the average distance between elements (between single-linkage and complete-linkage). 
         $$d(C_i, C_j) = \frac{\sum x \in C_i, x' \in C_j d(x, x')}{|C_i| \cdot |C_j|}$$
-        <img src="https://i.imgur.com/gjktfa3.png" alt="drawing" width="500"/>
-
         
+    <img src="https://i.imgur.com/gjktfa3.png" alt="drawing" width="500"/>
+
+
 | Advantages of agglomerative clustering      | Disadvantages |
 | ----------- | ----------- |
 | It is simple to implement, with widespread application   | It may have imbalanced clusters |
@@ -278,6 +279,10 @@ Edge weights are determined by difference in intensities by using using L2 norm 
 <img src="https://i.imgur.com/x27iFBO.png" alt="drawing"/>
 
 Edges are chosen for only top ten nearest neighbors in feature space to ensure run time of $O(n \log n)$ where $n$ is number of pixels.
+
+
+
+
 
 
 
