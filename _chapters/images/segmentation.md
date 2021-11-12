@@ -8,8 +8,13 @@ The goal of image segmentation is to identify groups of pixels that go together,
 * #### Summarize data:
   It is often easier to think of an image as consisting of several macroscopic entities rather than a series of pixels. Representing each entity as a token rather than each pixel individually allows us to analyze large amounts of data more efficiently, as well as denoise data by separating actual entities from noise.
 * #### Counting
-  This allows us to get characteristics of the segmented images, and count up 
-    
+  Clustering allows us to get characteristics of the segmented images, and count up/represent those summary characteristics e.g. size, color, etc.
+* #### Segmentation
+  As discussed earlier, we are able to separate images into different coherent regions using clustering.
+* #### Prediction
+  After clustering images, we are able to see similarities between the clusters- for instance, image labels determining what a specific clster depicts. We can use this to infer the classifications of unknown clusters, as they are likely to be similar.
+  
+In this unit, we will learn different ways through which images can be broken down into clusters and segmented, as well as the characteristics that delineate between clusters and allow us to group pixels and macroscopic components of images together.
 
 
 # 13.2 Gestalt Theory
@@ -69,7 +74,9 @@ Scientists have identified several "factors"- similarities between objects that 
     
 * #### Symmetry
   Symmetry states that objects that are symmetric across some axis will be more likely to be grouped together.
+  
    <img src="https://i.imgur.com/xSfVNxi.png" alt="drawing" width="400"/>
+   
     On the left, we can observe that the curly left brace and square right brace aren't symmetrical, while on the right, the curly left and right braces are symmetrical across a vertical axis. This leads to the sense that the two characters on the right are grouped, more so than the ones on the left.
     
 * #### Continuity
@@ -79,7 +86,9 @@ Scientists have identified several "factors"- similarities between objects that 
     
 * #### Closure
   Closure states that humans tend to perceive objects in a complex pattern as belonging to a single pattern or object rather than a series of disconnected parts.
+  
 <img src="https://i.imgur.com/5Vssqc2.png" alt="drawing" width="400"/>
+
     In the IBM logo, we perceive the image as forming the characters I, B, and M, rather than a series of disconnected horizontal shapes. This is due to the closure factor, which states that that because the shapes form the pattern of letters, we fill in the empty space, and interpret the image as those letters rather than a random collection of shapes.
     
 With that said, it's important to note that even though these concepts exist, to implement them in an algorithm is quite difficult. For instance, especially when dealing with real-world objects, it's not easy to determine if two objects share a grouping by the parallelism factor, because of the complexities of images and slight variations that make algorithmic determination of such factors difficult.
@@ -89,6 +98,7 @@ Interpretative cues aid our observational skills to allow us to interpret images
 
 * #### Continuity through occlusion cues
   Sometimes, drawing lines that delineate occlusions or sometimes even occlude an image further can help with inferring an interpretation for the original image.
+  
 <img src="https://i.imgur.com/j8sACUe.png" alt="drawing" width="300"/>
 <img src="https://i.imgur.com/6pDO6SN.png" alt="drawing" width="300"/>
 
@@ -101,7 +111,9 @@ In this image, shading the occluded parts in grey once again helps to make the i
 
 * #### Figure-ground discrimination
   Differences between the foreground and the background, particualrly with sharp color contrasts, can aid in image interpretation.
+  
 <img src="https://i.imgur.com/z1VxxV9.png" alt="drawing" width="300"/>
+
 In this image, the white figure of a lamppost starkly contrasts with the black surroundings, which forms a pair of symmetric faces; this color contrast allows us to interpret the image in two alternate ways depending on which color we treat as the foreground.
 
 # 13.3 Agglomerative Clustering
@@ -183,21 +195,21 @@ The properties desired for a good clustering algorithm include:
     This is equivalent to the minimum spanning tree algorithm. Usually produces long and skinny clusters. You can set a threshold and stop when the distance between clusters is above this threshold. 
         
     $$d(C_i, C_j) = \min_{x \in C_i, x' \in C_j} d(x, x')$$
-![](https://i.imgur.com/82aCTWs.png =x170)
+    <img src="https://i.imgur.com/82aCTWs.png" alt="drawing" width="500"/>
 
         
         
 * #### Complete Link
     Clusters with this type of measure tend to be compact and equal in diameter.
         $$d(C_i, C_j) = \max_{x \in C_i, x' \in C_j} d(x, x')$$
-        ![](https://i.imgur.com/TSyNIvy.png =x170)
+        <img src="https://i.imgur.com/TSyNIvy.png" alt="drawing" width="500"/>
 
         
         
 * #### Average Link
     This is the average distance between elements (between single-linkage and complete-linkage). 
         $$d(C_i, C_j) = \frac{\sum x \in C_i, x' \in C_j d(x, x')}{|C_i| \cdot |C_j|}$$
-        ![](https://i.imgur.com/gjktfa3.png =x190)
+        <img src="https://i.imgur.com/gjktfa3.png" alt="drawing" width="500"/>
 
         
 | Advantages of agglomerative clustering      | Disadvantages |
@@ -264,9 +276,6 @@ Edge weights are determined by difference in intensities by using using L2 norm 
 <img src="https://i.imgur.com/x27iFBO.png" alt="drawing"/>
 
 Edges are chosen for only top ten nearest neighbors in feature space to ensure run time of $O(n \log n)$ where $n$ is number of pixels.
-
-
-
 
 
 
